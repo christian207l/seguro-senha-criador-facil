@@ -65,13 +65,13 @@ const PasswordGenerator = () => {
         {/* Hero Image Section */}
         <div className="lg:col-span-1 flex flex-col items-center justify-center space-y-4">
           <img 
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop&crop=center" 
-            alt="Segurança digital - circuitos de computador"
+            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop&crop=center" 
+            alt="Código colorido de software em monitor"
             className="w-full max-w-sm rounded-lg shadow-lg"
           />
           <img 
-            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=250&fit=crop&crop=center" 
-            alt="Código de segurança Matrix"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop&crop=center" 
+            alt="MacBook com linhas de código na tela"
             className="w-full max-w-sm rounded-lg shadow-lg"
           />
         </div>

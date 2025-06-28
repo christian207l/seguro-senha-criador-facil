@@ -16,8 +16,8 @@ const SecurityTips = () => {
       
       <div className="flex items-center justify-center">
         <img 
-          src="https://images.unsplash.com/photo-1485833077593-4278bba3f11f?w=300&h=200&fit=crop&crop=center" 
-          alt="Segurança cibernética"
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=200&fit=crop&crop=center" 
+          alt="Monitor mostrando código de programação"
           className="w-full max-w-xs rounded-lg shadow-md"
         />
       </div>
