@@ -60,48 +60,67 @@ const PasswordGenerator = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-4">
-      <Card className="shadow-lg">
-        <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Gerador de Senhas Seguras
-          </CardTitle>
-          <p className="text-muted-foreground">
-            Crie senhas fortes e personalizadas
-          </p>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <PasswordDisplay
-            password={password}
-            copied={copied}
-            onCopy={copyToClipboard}
+    <div className="w-full max-w-4xl mx-auto p-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Hero Image Section */}
+        <div className="lg:col-span-1 flex flex-col items-center justify-center space-y-4">
+          <img 
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop&crop=center" 
+            alt="Segurança digital - circuitos de computador"
+            className="w-full max-w-sm rounded-lg shadow-lg"
           />
-
-          <PasswordOptions
-            length={length}
-            onLengthChange={setLength}
-            includeUppercase={includeUppercase}
-            includeLowercase={includeLowercase}
-            includeNumbers={includeNumbers}
-            includeSymbols={includeSymbols}
-            onUppercaseChange={setIncludeUppercase}
-            onLowercaseChange={setIncludeLowercase}
-            onNumbersChange={setIncludeNumbers}
-            onSymbolsChange={setIncludeSymbols}
+          <img 
+            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=250&fit=crop&crop=center" 
+            alt="Código de segurança Matrix"
+            className="w-full max-w-sm rounded-lg shadow-lg"
           />
+        </div>
 
-          <Button
-            onClick={generatePassword}
-            className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
-            size="lg"
-          >
-            <RefreshCw className="mr-2 h-4 w-4" />
-            Gerar Nova Senha
-          </Button>
+        {/* Main Generator Card */}
+        <div className="lg:col-span-2">
+          <Card className="shadow-lg">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Gerador de Senhas Seguras
+              </CardTitle>
+              <p className="text-muted-foreground">
+                Crie senhas fortes e personalizadas
+              </p>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <PasswordDisplay
+                password={password}
+                copied={copied}
+                onCopy={copyToClipboard}
+              />
 
-          <SecurityTips />
-        </CardContent>
-      </Card>
+              <PasswordOptions
+                length={length}
+                onLengthChange={setLength}
+                includeUppercase={includeUppercase}
+                includeLowercase={includeLowercase}
+                includeNumbers={includeNumbers}
+                includeSymbols={includeSymbols}
+                onUppercaseChange={setIncludeUppercase}
+                onLowercaseChange={setIncludeLowercase}
+                onNumbersChange={setIncludeNumbers}
+                onSymbolsChange={setIncludeSymbols}
+              />
+
+              <Button
+                onClick={generatePassword}
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+                size="lg"
+              >
+                <RefreshCw className="mr-2 h-4 w-4" />
+                Gerar Nova Senha
+              </Button>
+
+              <SecurityTips />
+            </CardContent>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 };
